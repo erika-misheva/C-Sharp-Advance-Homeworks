@@ -53,6 +53,8 @@ namespace Task3
                             if (userPlays == computerPlays)
                             {
                                 Console.WriteLine("There is no winner");
+                                gamesPlayed--;
+                                Console.WriteLine("These round does not count.");
                                 break;
                             }
                             else if (computerPlays == "rock" && userPlays == "scissors")
@@ -106,6 +108,8 @@ namespace Task3
                             Console.WriteLine($"The results are You:{userWins} : Computer:{computerWins}");
                             double userWinInPercentage = (userWins / gamesPlayed) * 100;
                             double computerWinInPercentage = (computerWins / gamesPlayed) * 100;
+                            userWinInPercentage = Math.Round(userWinInPercentage);
+                            computerWinInPercentage = Math.Round(computerWinInPercentage);
                             Console.WriteLine($"The result is {userWinInPercentage} : {computerWinInPercentage}");
                             break;
 
