@@ -13,7 +13,6 @@ namespace thirdClassHomework
         }
         public static void Validate(Dog dog)
         {
-            bool validateDog = false;
             if (dog.Name.Length >= 2 || dog.Id > 0 || string.IsNullOrEmpty(dog.Color))
             {
                 Console.WriteLine($"All the of the properties are set for the object {dog.Name}");
